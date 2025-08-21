@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for mobile navigation */
+.navbar {
+  display: none; /* Hide by default on small screens */
+  opacity: 0;
+  transform: translateY(-20px); /* Initial position above */
+}
+
+.navbar.active {
+  right: auto; /* Remove right positioning */
+  opacity: 1;
+  display: flex; /* Show as flex when active */
+  transform: translateY(0); /* Animate to original position */
+}
+
+.navbar.active a {
+  color: theme("colors.text-color");
+}
